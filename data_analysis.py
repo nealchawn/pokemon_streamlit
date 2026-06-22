@@ -4,7 +4,7 @@ import plotly.express as px
 
 # statstic 1: display pokemon stats
 pokemon_df = pd.read_csv("./pokemon_gen1_to_gen4.csv")
-print(pokemon_df.head())
+# print(pokemon_df.head())
 
 # statistic 2: total pokemon per generation vs generation
 total_pokemon_by_generation = (
@@ -14,7 +14,7 @@ total_pokemon_by_generation = (
     .reset_index(name="total_pokemon")
 )
 
-print(total_pokemon_by_generation)
+# print(total_pokemon_by_generation)
 
 # statstic 3: frequency of pokemon type
 # Note slices represent type appearances rather than *unique Pokémon
@@ -48,7 +48,7 @@ type_frequency = type_frequency.sort_values(
     ascending=False
 )
 
-print(type_frequency)
+# print(type_frequency)
 
 
 
@@ -76,7 +76,7 @@ for pokemon_type in pokemon_types:
 
 average_bst_by_type = pd.DataFrame(rows)
 
-(average_bst_by_type)
+# (average_bst_by_type)
 
 
 
@@ -88,7 +88,7 @@ average_bst_by_type = pd.DataFrame(rows)
 # -----------------------------
 @st.cache_data
 def load_data():
-    pokemon_df = pd.read_csv("./sample_data/pokemon_gen1_to_gen4.csv")
+    pokemon_df = pd.read_csv("./pokemon_gen1_to_gen4.csv")
 
     pokemon_df.columns = pokemon_df.columns.str.strip()
 
